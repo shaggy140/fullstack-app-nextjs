@@ -67,12 +67,7 @@ const Sidebar = () => {
         <Box marginBottom="20px">
           <List spacing={2}>
             {navMenu.map((menu) => (
-              <ListItem
-                paddingX="20px"
-                fontSize="16px"
-                color="white"
-                key={menu.name}
-              >
+              <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
                     <LinkOverlay>
@@ -92,12 +87,7 @@ const Sidebar = () => {
         <Box marginTop="20px" marginBottom="20px">
           <List spacing={2}>
             {musicMenu.map((menu) => (
-              <ListItem
-                paddingX="20px"
-                fontSize="16px"
-                color="white"
-                key={menu.name}
-              >
+              <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
                     <LinkOverlay>
