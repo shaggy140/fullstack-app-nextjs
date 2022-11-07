@@ -4,7 +4,7 @@ import prisma from "./prisma";
 
 export const validateRoute = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    const { SPOTIFY_ACCESS_TOKEN: token } = req.cookies;
+    const token = req.cookies.SPOTIFY_ACCESS_TOKEN;
 
     if (token) {
       let user;
@@ -30,4 +30,9 @@ export const validateRoute = (handler) => {
     res.status(401);
     res.json({ error: "Not Authorizied" });
   };
+};
+
+export const validateToken = (token) => {
+  const user = jwt.verify(token, "hello");
+  return user;
 };
