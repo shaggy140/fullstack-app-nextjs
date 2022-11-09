@@ -1,3 +1,3 @@
 ### Spotify Clone 
 
-fullstack-app-nextjs.vercel.app
+https://fullstack-app-nextjs.vercel.app
